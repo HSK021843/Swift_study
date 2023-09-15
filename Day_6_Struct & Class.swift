@@ -55,3 +55,5 @@ print("값 넣은 후 Another_channel: \(Another_channel.name)")
 // struct: 복사의 개념 -> 한쪽에 변경/훼손되도 다른 쪽은 영향 X
 // class: 서로 연결되어 있음 -> 한쪽이 변경/훼손되면 다른 쪽도 영향있음
 // 즉, struct는 서로 다른 공간을 참조, class는 서로 같은 공간을 참조
+// struct -> 값 타입, class -> 참조 타입
+// Swift의 대부분은 struct 구조
