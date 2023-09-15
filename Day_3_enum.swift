@@ -46,7 +46,7 @@ enum SchoolDetail {
     case middle(name: String)
     case high(name: String)
 
-    func getName() -> String { // -> 을 이용해서 반환하는 값 표기
+    func getName() -> String { // -> 을 이용해서 반환하는 값 표기. return값 존재시 명시안하면 오류남!
         switch self {
             case .elementary(let name): // 괄호 안에 let name으로 해도 되고
                 return name
