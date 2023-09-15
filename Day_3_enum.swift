@@ -1,7 +1,8 @@
-// enum: 타입을 나누는 것
+// enum
+// 의미: 타입을 나누는 것
 
 
-// 카테고리가 학교 -> 초, 중, 고
+// 예시) 카테고리가 학교 -> 초, 중, 고
 // 방법 1
 enum School {
     case elementary
@@ -45,20 +46,20 @@ enum SchoolDetail {
     case middle(name: String)
     case high(name: String)
 
-    func getName() -> String {// -> 을 이용해서 반환하는 값 표기
-        switch self{
-            case.elementary(let name): // 괄호 안에 let name으로 해도 되고
+    func getName() -> String { // -> 을 이용해서 반환하는 값 표기
+        switch self {
+            case .elementary(let name): // 괄호 안에 let name으로 해도 되고
                 return name
             case let .middle(name): // let은 case 뒤에 붙이고 괄호 안에는 name만 붙여도 된다
                 return name
-            case let .high(name): // 또한, :가 필요하다
+            case .high(let name): // 또한, :가 필요하다
                 return name
         }
     }
 }
 
-let yourMiddlSchoolName = SchoolDetail.middle(name: "중학교")
-print("yourMiddlSchoolName: \(yourMiddlSchoolName)")
+let yourMiddleSchoolName = SchoolDetail.middle(name: "중학교")
+print("yourMiddleSchoolName: \(yourMiddleSchoolName)")
 
 // 이름을 정해서 값 가져올 때, 값만 가져오기 -> 함수 사용하기
-print("yourMiddlSchoolName: \(yourMiddlSchoolName.getName())")
+print("yourMiddleSchoolName: \(yourMiddleSchoolName.getName())")
